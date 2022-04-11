@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<form method="post">
+    {% csrf_token %}
+    <h2>Add meg az oktatási azonosítód:</h2>
+    <input type="password" name="oAzonosito" id="">
+    <button type="submit">Küldés</button>
+</form>
+
+{% endblock %}

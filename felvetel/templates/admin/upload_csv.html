@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block statics %}
+<link rel="stylesheet" href="{% static 'css/upload_csv.css' %}">
+{% endblock %}
+
+{% block content %}
+
+{% if nope %}
+<h3>Miért vagy itt?</h3>
+{% elif rovid %}
+<h2>A csv nem tartalmaz minden adatot.</h2>
+<a href="{% url 'up_csv' %}"><button>Újra megpróbálom...</button></a>
+{% elif igen %}
+<h3>Csv sikeresen feltöltve!</h3>
+{% else %}
+<form method="post">
+    {% csrf_token %}
+    <h2>CSV feltöltése:</h2>
+    <div class="container">
+        <h4 class="label">admin jelszó</h4>
+        <input type="password" name="jelszo" id="csvjelszo">
+    </div>
+    <div class="container">
+        <h4 class="label" id="lcsv"> csv </h4>
+        <textarea name="csvSz" id="" cols="30" rows="10"></textarea>
+    </div>
+    <button type="submit">Feltöltése</button>
+</form>
+{% endif %}
+
+{% endblock %}

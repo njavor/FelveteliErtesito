@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block statics %}
+<link rel="stylesheet" href="{% static 'css/dontes.css' %}">
+{% endblock %}
+
+{% block content %}
+
+    <h2 class="nev">{{Viki.nev}}</h2>
+    <ul class="eredmenyek">
+        {% for key, value in tagozats.items %}
+        <li>
+            {{key}} tagozatra {{value.0}} ponttal
+            {% if value.1 == "felvételt nyert" %}
+            <span class="in">{{value.1}}</span>.
+            {% else %}
+            <span class="out">{{value.1}}</span>.
+            {% endif %}
+        </li>
+        {% endfor %}
+    </ul>
+
+    {% endblock %}

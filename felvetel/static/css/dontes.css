@@ -1,0 +1,37 @@
+ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    height: fit-content;
+    
+    opacity: 0;
+    transition: 1.5s;
+}
+.see{
+    opacity: 1;
+}
+li{
+    height: fit-content;
+    list-style: none;
+    line-height: 150%;
+}
+
+.nev{
+    font-weight: 700;
+    width: 100%;
+    opacity: 0;
+    transition: 1.5s;
+}
+.nev-be{
+    opacity: 1;
+}
+.in{
+    font-weight: 700;
+    color: #429948;
+}
+.out{
+    font-weight: 700;
+    color: #994242;
+}

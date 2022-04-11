@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block statics %}
+<link rel="stylesheet" href="{% static 'css/nincs.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<h2>Ezzel az azonosítóval nem jelentkeztek egy tagozatunkra sem.</h2>
+<a href="{% url 'index' %}"><button>Újra beírom az azonosítót...</button></a>
+
+
+
+
+{% endblock %}

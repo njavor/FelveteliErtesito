@@ -1,0 +1,17 @@
+.container{
+    background-color: inherit;
+    color: inherit;
+
+    height: fit-content;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.1em;
+}
+.label{
+    align-self: flex-start;
+    font-weight: 400;
+}
+#lcsv{
+    align-self: center;
+}
