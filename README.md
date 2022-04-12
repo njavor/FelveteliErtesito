@@ -1,1 +1,2 @@
-# FelveteliErtesito
+# FelveteliErtesito - https://felveteliertesito.herokuapp.com/
+A jelentkező model kissé csúnya...
